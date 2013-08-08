@@ -11,7 +11,7 @@ module.exports = function(bot) {
     console.log('Error: ', msg);
   })
 
-  client.addListener('message#'+CHANNEL, function(from, msg) {
+  client.addListener('message'+CHANNEL, function(from, msg) {
     if(from === NICK)
       return;
     bot.send('tt', from+': '+msg)

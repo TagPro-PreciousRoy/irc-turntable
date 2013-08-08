@@ -10,7 +10,7 @@ module.exports = function(bot) {
   tt.on('speak', function(data) {
     if(data.name === 'tagpro-tt') // should use env variable for botname
       return;
-    bot.send('irc', data.name+': '+data.msg);
+    bot.send('irc', data.name+': '+data.text);
   });
 
   return tt;
