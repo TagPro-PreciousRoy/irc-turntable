@@ -1,0 +1,28 @@
+{
+  "name": "tagpro-tt",
+  "version": "0.0.0",
+  "description": "a bot to send msgs between turntable and irc",
+  "main": "index.js",
+  "dependencies": {
+    "irc": "~0.3.6",
+    "ttapi": "~3.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/brainss/tagpro-tt.git"
+  },
+  "keywords": [
+    "turntable",
+    "irc",
+    "bot"
+  ],
+  "author": "brainss",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brainss/tagpro-tt/issues"
+  }
+}
