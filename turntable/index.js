@@ -19,13 +19,13 @@ module.exports = function(bot) {
 
   tt.on('registered', function(data) {
     var user = data.user[0];
-    var green = '\x0009';
+    var green = '\u000309'
     bot.send('irc', green+user.name+' has joined tt.fm/tagpro')
   })
 
   tt.on('deregistered', function(data) {
     var user = data.user[0];
-    var red = '\x0004';
+    var red = '\u000304'
     bot.send('irc', red+user.name+' has left tt.fm/tagpro')
   })
 

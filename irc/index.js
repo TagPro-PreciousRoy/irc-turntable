@@ -29,5 +29,17 @@ module.exports = function(bot) {
     bot.send('tt', nick+' has left '+CHANNEL);
   })
 
+  client.addListener('quit', function(nick) {
+    if(nick === NICK)
+      return;
+    bot.send('tt', nick+' has quit '+CHANNEL);
+  })
+
+  client.addListener('kick'+CHANNEL, function(nick, by, reason) {
+    if(nick === NICK)
+      return;
+    bot.send('tt', nick+' was kicked by '+by+' for '+reason);
+  })
+
   return client;
 }
