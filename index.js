@@ -1,7 +1,7 @@
 // communication channel
 var bot = {};
 bot.tt = require('./turntable')(bot)
-bot.irc = reuquire('./irc')(bot)
+bot.irc = require('./irc')(bot)
 
 bot.send = function(channel, msg) {
   if(channel === 'tt')
