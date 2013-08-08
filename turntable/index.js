@@ -17,5 +17,17 @@ module.exports = function(bot) {
     tt.bop();
   })
 
+  tt.on('registered', function(data) {
+    var user = data.user[0];
+    var green = '\x0009';
+    bot.send('irc', green+user.name+' has joined tt.fm/tagpro')
+  })
+
+  tt.on('deregistered', function(data) {
+    var user = data.user[0];
+    var red = '\x0004';
+    bot.send('irc', red+user.name+' has left tt.fm/tagpro')
+  })
+
   return tt;
 }

@@ -17,5 +17,17 @@ module.exports = function(bot) {
     bot.send('tt', from+': '+msg)
   })
 
+  client.addListener('join'+CHANNEL, function(nick) {
+    if(nick === NICK)
+      return;
+    bot.send('tt', nick+' has joined '+CHANNEL)
+  })
+
+  client.addListener('part'+CHANNEL, function(nick) {
+    if(nick === NICK)
+      return;
+    bot.send('tt', nick+' has left '+CHANNEL);
+  })
+
   return client;
 }
