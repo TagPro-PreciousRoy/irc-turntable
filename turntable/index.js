@@ -19,7 +19,7 @@ module.exports = function(bot) {
 
   tt.on('registered', function(data) {
     var user = data.user[0];
-    var green = '\u000309'
+    var green = '\u000303'
     bot.send('irc', green+user.name+' has joined tt.fm/tagpro')
   })
 
