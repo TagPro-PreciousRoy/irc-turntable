@@ -13,5 +13,9 @@ module.exports = function(bot) {
     bot.send('irc', data.name+': '+data.text);
   });
 
+  tt.on('newsong', function() {
+    tt.bop();
+  })
+
   return tt;
 }
