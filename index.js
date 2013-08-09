@@ -8,6 +8,7 @@ var Turntable = require('ttapi');
 var AUTH    = config.tt_auth    = process.env.TT_AUTH;
 var USERID  = config.tt_userid  = process.env.TT_USERID;
 var ROOMID  = config.tt_roomid  = process.env.TT_ROOMID;
+config.tt_name = 'tagpro-tt';
 
 bot.tt = new Turntable(AUTH, USERID, ROOMID);
 
