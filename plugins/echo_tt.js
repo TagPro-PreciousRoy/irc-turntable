@@ -4,7 +4,7 @@ module.exports = function(bot) {
 
   // echo turntable chat to irc
   tt.on('speak', function(data) {
-    if(data.name == bot.config.tt_name)
+    if(data.name == bot.config.tt_name || data.text[0] == '!')
       return;
     bot.send('irc', data.text);
   })

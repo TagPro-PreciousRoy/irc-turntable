@@ -3,8 +3,8 @@ module.exports = function(bot) {
   var irc = bot.irc;
 
   // echo irc chat to turntable
-  irc.addListener('message', function(channel, nick, msg) {
-    if(nick === bot.config.irc_nick)
+  irc.addListener('message', function(nick, channel, msg) {
+    if(nick === bot.config.irc_nick || msg[0] == '!')
       return;
     bot.send('tt', nick+': '+msg);
   })
