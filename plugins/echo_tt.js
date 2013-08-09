@@ -6,7 +6,7 @@ module.exports = function(bot) {
   tt.on('speak', function(data) {
     if(data.name == bot.config.tt_name || data.text[0] == '!')
       return;
-    bot.send('irc', data.text);
+    bot.send('irc', data.name+': '+data.text);
   })
 
   // echo turtable joins to irc
