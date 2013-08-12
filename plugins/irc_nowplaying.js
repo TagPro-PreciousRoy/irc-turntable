@@ -13,7 +13,7 @@ module.exports = function(bot) {
 
         // nothing playing
         if(song === null)
-          return bot.send('irc', 'There are no songs playing');
+          return bot.send('irc', msg + 'There are no songs playing');
 
         var metadata = song.metadata;
         var bold = '\x02';
