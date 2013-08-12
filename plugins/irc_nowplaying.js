@@ -9,10 +9,19 @@ module.exports = function(bot) {
 
       var msg = 'NOW PLAYING: ';
       tt.roomInfo(function(roomInfo) {
+        var song = roomInfo.room.metadata.current_song;
 
-        var metadata = roomInfo.room.metadata.current_song.metadata;
+        // nothing playing
+        if(song === null)
+          return bot.send('irc', 'There are no songs playing');
 
-        msg += metadata.song + ' by ' + metadata.artist;
+        var metadata = song.metadata;
+        var bold = '\x02';
+        var reset = '\x0f';
+
+        msg += bold + metadata.song + reset
+            + ' by '+ bold + metadata.artist + reset;
+
         bot.send('irc', msg);
       })
   }
