@@ -1,4 +1,4 @@
-# tagpro-tt
+# irc-turntable
 A bot to send messages between turntable and irc.
 
 ### Environment Variables
