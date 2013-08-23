@@ -1,8 +1,7 @@
-module.exports = function(bot) {
-  var tt = bot.tt;
+var bot = global.bot;
+var tt = bot.tt;
 
-  // autobop
-  tt.on('newsong', function() {
-    tt.bop();
-  })
-}
+// autobop
+tt.on('newsong', function() {
+  tt.bop();
+})
