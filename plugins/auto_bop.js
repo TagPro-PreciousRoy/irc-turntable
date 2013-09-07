@@ -12,7 +12,7 @@ tt.on('update_votes', function(d) {
   // vote_up in the next minute
   var timer = Math.floor(Math.random() * 6e4);
   setTimeout(vote_up, timer);
-}
+})
 
 function vote_up() {
   bopped = true;
